@@ -1,0 +1,238 @@
+{
+  "main": {
+    "id": "32b0dee36004732b",
+    "type": "split",
+    "children": [
+      {
+        "id": "74e98d07f3e0a7c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24f030c2b9e9ebca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Documentation/Attack Storyboarding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Attack Storyboarding"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "588a233d327c091f",
+    "type": "split",
+    "children": [
+      {
+        "id": "919cc59a39918dbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1ca7e204761fc041",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "589d7ae7f700f837",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c9eb9b4574a20216",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fee90b36e7140270",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2d6448400ec8c85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "22d35b0807ddc779",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Minutes of Meeting/Session 2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "33991293b636ee48",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Minutes of Meeting/Session 2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "2ab5dd4d30a87aac",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a35a06d703695511",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "234d8a642af1f113",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lab Configuration Notes.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Lab Configuration Notes"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 266.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "24f030c2b9e9ebca",
+  "lastOpenFiles": [
+    "Documentation/Lab Configuration Notes.md",
+    "Documentation/Check list.md",
+    "Documentation/Attack Storyboarding.md",
+    "exploits/php shell.md",
+    "exploits/r_shell.php.md",
+    "exploits/Untitled.md",
+    "www.pentestmonkey.com.md",
+    "exploits",
+    "[.md",
+    "vulnerable website/create_ticket.php.md",
+    "Untitled.md",
+    "images/login page.png",
+    "images",
+    "Documentation/palessi-network.jpg",
+    "Untitled 1.base",
+    "Untitled.base",
+    "images/gobuster scan.png",
+    "Minutes of Meeting/Session 3 - 5 Novemeber 2026.md",
+    "images/initial nmap scan.png",
+    "Tools/nmap.md",
+    "Pasted image 20261107162932.png",
+    "Pasted image 20261107163006.png",
+    "Pasted image 20261107162935.png",
+    "Pasted image 20261107162549.png",
+    "vulnerable website/dashboard.php.md",
+    "Tools",
+    "Untitled 5.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Untitled 6.md",
+    "Untitled 4.md",
+    "Untitled 3.md",
+    "vulnerable website/admin.php.md",
+    "diagrams/EDR Design (MariaDB).md",
+    "vulnerable website/login.php.md",
+    "Documentation",
+    "diagrams/Network Diagram.md",
+    "diagrams",
+    "network diagram.jpg",
+    "AdobeExpressPhotos_4c7217d4d60041ff825955a7d8f53da5_CopyEdited.jpg",
+    "Minutes of Meeting/Session 2 - 28 October 2026.md",
+    "Minutes of Meeting/Session 1 - 19 October 2026.md",
+    "Minutes of Meeting",
+    "vulnerable website/admin.php.md.tmp.15652.0d2093f476ab",
+    "vulnerable website/view_ticket.php.md.tmp.15652.61d4a4f2b6fe",
+    "Untitled.canvas"
+  ]
+}

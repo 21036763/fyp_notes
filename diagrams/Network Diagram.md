@@ -1,0 +1,1 @@
+![Palessi network diagram](palessi-network.jpg)
