@@ -162,10 +162,17 @@ find / -perm -4000 2>/dev/null
 
 The results would show the misconfigured SUID bits: 
 ```bash
-/usr/share/python3 --> python 3.14
-/usr/share/find
+/usr/bin/python3
+/usr/bin/find
 # This can be confirmed with www.gtfobins.com to obtain a privilege shell
+
+# We can double confirm the SUID bits to be set with 
+ls -la /usr/bin/python3 
+# -rwsr-xr-x 1 root root 7477160 Aug 20 18:41 /usr/bin/python3.14
+ls -la /usr/bin/find
+#-rwsr-xr-x 1 root root 216632 Feb  3  2026 /usr/bin/find
 ```
+
 
 >[!danger] Obtaining root acces
 
