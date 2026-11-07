@@ -25,7 +25,7 @@ sudo nmap 192.168.1.0/24
 ---
 ### Gaining Access
 ![[login page.png]]
-1. The malicious actor would conduct a SQLi attack on the login form - username field given that they have no credentials. (Theoretically it should work if the attacker typed the correct command.)
+1. The malicious actor would conduct a SQLi attack on the [[login.php|login form]] - username field given that they have no credentials. (Theoretically it should work if the attacker typed the correct command.)
 > [!tip] MariaDB requires a space after the two -- in order to count them as a comment. 
 2. ```bash
    ' ' OR 1=1--  
@@ -84,7 +84,7 @@ Dumping the username and password
 #### Vulnerability 2: Cross Site Scripting (XSS) - Stored
 
 The actor would create a ticket within the navbar - directing to [[create_ticket.php]]. 
-In order for the stored XSS to work, the actor verifies that the page is a http-POST form. (View Source Code).
+In order for the stored #Cross-Site-Scripting  to work, the actor verifies that the page is a http-POST form. (View Source Code).
 
 The actor is allowed to enter XSS code into any of the input fields which he can conduct session-hijacking or session-fixation attacks later wards. 
 
@@ -104,14 +104,14 @@ Malicious XSS code
 
 Once the ticket is created, an admin would review the ticket. The moment the administrator clicks on the ticket, the XSS would be executed and the PHPSESSID (PHP cookie) would be POSTED to the actor's listener on Kali. With the administrator's cookie, the actor can swap their own cookie for the actor's cookie, successfully conducting a session hijacking attack.
 #### Vulnerability 3: IDOR
-Broken access control (IDOR) has been configured on the web server that allows any users to view any tickets within the ticketing system. This is also a example of broken access control.
+Broken access control #IDOR has been configured on the web server that allows any users to view any tickets within the ticketing system. This is also a example of broken access control.
 
-IDOR can be conducted by the actor through several ways. Either from the URL parameter when searching for a ticket in [[query_ticket.php]]. The actor can enumerate the "searched id".
+#IDOR can be conducted by the actor through several ways. Either from the URL parameter when searching for a ticket in [[query_ticket.php]]. The actor can enumerate the "searched id".
 ```URL
 http://192.168.1.151/query_ticket.php?search={id}
 ```
 
-Alternatively, IDOR can also be conducted on the search bar within [[dashboard.php]].
+Alternatively, #IDOR can also be conducted on the search bar within [[dashboard.php]].
 
 The actor can either enumerate through all the tickets or use SQLi attack to dump out the active ticket database. Specifically ticket #21 created by Chloe Sim, which consists of a password reset request being handled insecurely. The password obtained within ticket #11 would be the domain password for the domain user Chloe Sim. (low hanging fruit #low_hanging_fruit)
 
@@ -120,7 +120,7 @@ The actor can either enumerate through all the tickets or use SQLi attack to dum
 #to_be_added
 #### Vulnerability 5: Local File Inclusion  / Path Traversal Attack
 
-For LFI, the actor would use the the attack surface of [[create_ticket.php]] or [[view_ticket.php]]. Because IDOR is misconfigured in the web server by default, the ticket does not need to belong to the attacker - the exploit would work on any <span style='color:green'>active</span> tickets. 
+For LFI, the actor would use the the attack surface of [[create_ticket.php]] or [[view_ticket.php]]. Because #IDOR is misconfigured in the web server on purpose, the ticket does not need to belong to the attacker - the exploit would work on any <span style='color:green'>active</span> tickets. 
 
 Within the [[view_ticket.php]] page, it shows the full conversation of the tickets, but the actor would be targeted the uploads section of the tickets as the web server does not employ any blacklisting/whitelisting of the files being uploaded. There are no file type restriction being configured on the web server nor the feature of automatically renaming the upload. 
 
@@ -135,7 +135,7 @@ Carrying over from [[#Vulnerability 5 Local File Inclusion / Path Traversal Atta
 The actor can upload a simple .[[php shell]] file onto the web server for RCE and execute system enumeration commands like `whoami`, `id`, `iproute` onto the system. 
 
 >[!info] reverse shell (RCE)
-The actor can also upload a simple [[r_shell.php|reverse shell]] file created from [revshells](www.revshells.com).
+The actor can also upload a simple [[r_shell.php|reverse shell]] file obtained from [revshell](https://www.revshell.com)
 
 >[!danger] Privilege Escalation
 
