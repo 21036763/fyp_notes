@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 >[!info] For specifications refer to [[Lab Configuration Notes]].
 ### Reconnaissance
