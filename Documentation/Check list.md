@@ -1,7 +1,7 @@
 # Check List
 
 >[!info] Notes
-> Tracks progress on [[Lab Configuration Notes]], [[Attack Storyboarding]] and [[EDR Design (MariaDB)]]
+> Tracks progress on [[Lab Configuration Notes]], [[Web Server Attack Storyboarding]] and [[EDR Design (MariaDB)]]
 
 > [!important] To-do List
 > - [ ] Create the ticketing system EDR schema - See [[EDR Design (MariaDB)]]

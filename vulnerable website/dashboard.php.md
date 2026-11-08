@@ -17,7 +17,7 @@
 
 #SQLi 
 - The SQL statement was not using the proper mitigations like prepared statements or checking for user inputs. The SQL statement only checks if the user runs a simple `1 OR 1=1'-- ` in the "ticket search" function.
-- Refer to [[Attack Storyboarding#Vulnerability 1 SQLi Attack]] for full attack chain.
+- Refer to [[Web Server Attack Storyboarding#Vulnerability 1 SQLi Attack]] for full attack chain.
 
 >[!warning] Misconfigurations
 

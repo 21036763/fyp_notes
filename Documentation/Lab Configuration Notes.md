@@ -1,7 +1,7 @@
 # Lab Configuration Notes
 
 >[!info] Notes
-> Underlying environment for the attack scenario in [[Attack Storyboarding]]. Progress tracked in [[Check list]]
+> Underlying environment for the attack scenario in [[Web Server Attack Storyboarding]]. Progress tracked in [[Check list]]
 
 ## Computer Configurations
 

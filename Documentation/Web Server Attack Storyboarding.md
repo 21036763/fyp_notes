@@ -1,4 +1,3 @@
-# Web Server
 >[!info] For specifications refer to [[Lab Configuration Notes]].
 ### Reconnaissance
 <span style='color:red'> *** There would be no reconnaissance conducted within the web server/lab activity.</span>
@@ -133,6 +132,9 @@ Carrying over from [[#Vulnerability 5 Local File Inclusion / Path Traversal Atta
 
 >[!info] php shell (RCE)
 The actor can upload a simple .[[php shell]] file onto the web server for RCE and execute system enumeration commands like `whoami`, `id`, `iproute` onto the system. 
+#### Part 1: 
+With the uploaded [[php shell]], the actor is now able to execute arbitrary commands or any malicious commands of their choice. The actor is able to conduct #path-traversal attacks on the web server by issuing linux system commands like `pwd`, `cd` etc or even `cd ../../..` which brings them back to the `/` root directory.
+#### Part 2:
 
 >[!info] reverse shell (RCE)
 The actor can also upload a simple [[r_shell.php|reverse shell]] file obtained from [revshell](https://www.revshell.com)
