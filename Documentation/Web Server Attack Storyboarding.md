@@ -1,3 +1,5 @@
+---
+---
 >[!info] For specifications refer to [[Lab Configuration Notes]].
 ### Reconnaissance
 <span style='color:red'> *** There would be no reconnaissance conducted within the web server/lab activity.</span>

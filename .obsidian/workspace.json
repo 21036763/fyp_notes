@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Documentation/Web Server Attack Storyboarding.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web Server Attack Storyboarding"
+              "title": "README"
             }
           }
         ]
@@ -188,8 +188,11 @@
   },
   "active": "15661fb475be2769",
   "lastOpenFiles": [
-    "exploits/php shell.md",
+    "index.md",
+    "Documentation/Windows Machine Attack Storyboarding.md",
+    "_config.yml",
     "Documentation/Web Server Attack Storyboarding.md",
+    "exploits/php shell.md",
     "exploits/r_shell.php.md",
     "vulnerable website/query_ticket.php.md",
     "vulnerable website/view_ticket.php.md",
@@ -225,14 +228,12 @@
     "Untitled 5.md",
     "Untitled 2.md",
     "Untitled 1.md",
-    "Untitled 6.md",
     "Documentation",
     "diagrams",
     "network diagram.jpg",
     "AdobeExpressPhotos_4c7217d4d60041ff825955a7d8f53da5_CopyEdited.jpg",
     "Minutes of Meeting",
     "vulnerable website/admin.php.md.tmp.15652.0d2093f476ab",
-    "vulnerable website/view_ticket.php.md.tmp.15652.61d4a4f2b6fe",
     "Untitled.canvas"
   ]
 }
