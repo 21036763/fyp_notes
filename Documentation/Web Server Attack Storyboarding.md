@@ -119,7 +119,25 @@ The actor can either enumerate through all the tickets or use SQLi attack to dum
 
 ---
 #### Vulnerability 4: CSRF
-#to_be_added
+#Cross-Site-Scripting 
+The attacker can exploit this vulnerability through either methods:
+> [!info] both use cases the stage-changing action would be resetting the victim's password.
+##### Method 1 (Phishing Link):
+The actor can create a phishing website/webpage and serve it as a link to the victim. Upon clicking on the link, the embedded CSRF code would be executed on the victim's browser, leading them to the [[reset_password.php]] page where the CSRF would conduct a state changing action on behalf of the victim. 
+##### Method 2(Stored XSS with CSRF):
+The actor can leverage the web server vulnerability on it's misconfiguration and ability of conducing #Cross-Site-Scripting to embed the malicious link within the stored XSS. This exploit can be achieved with the same method of [[#Vulnerability 2 Cross Site Scripting (XSS) - Stored|Vulnerability 2]] where the actor creates a ticket but instead of conducting a session hijacking attempt, the actor would modify the payload to redirect to the chosen malicious form link created by the actor. Once the administrator visits the web page, the XSS would be fired in the background, conducting the state changing action on behalf of the attacker. 
+
+*Textbook example of a classic CSRF attack (pure html):
+```php
+<img src=x onerror(fetch("http://192.168.1.151/reset_password.php?new_password=changeme123&confirm_password=changeme123"))
+```
+
+textbook example of a classic CSRF attack (Javascript)
+```javascript
+<scScriptript>new Img.src=("http://192.168.1.151/reset_password.php?new_password=csrf_pwned&confirm_password=csrf_pwned")</scScriptript> 
+#fall back if the webserver has blacklisted the <script> tag
+```
+---
 #### Vulnerability 5: Local File Inclusion  / Path Traversal Attack
 
 For LFI, the actor would use the the attack surface of [[create_ticket.php]] or [[view_ticket.php]]. Because #IDOR is misconfigured in the web server on purpose, the ticket does not need to belong to the attacker - the exploit would work on any <span style='color:green'>active</span> tickets. 
